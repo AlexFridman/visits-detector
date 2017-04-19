@@ -5,6 +5,13 @@ setup(
     version='',
     packages=find_packages(),
     url='',
+    install_requires=[
+        'tensorflow',
+        'keras',
+        'haveresine',
+        'geoindex',
+        'pandas'
+    ],
     license='',
     author='Alexander Fridman',
     author_email='alexfridman@outlook.com',
