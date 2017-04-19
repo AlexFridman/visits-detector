@@ -1,6 +1,5 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
-import logging
 import operator
 from collections import defaultdict
 from itertools import groupby
@@ -11,8 +10,6 @@ import pandas as pd
 from visits_detector.core.components.data_structures import EventType, Event
 from visits_detector.core.components.event_type_determiner.event_type_determiner_base import EventTypeDeterminerBase
 from visits_detector.core.nn_model.model import NNModel
-
-logging.basicConfig(level=logging.DEBUG)
 
 
 def interaction_recs_2_matrix(interaction_recs):
