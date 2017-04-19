@@ -82,4 +82,4 @@ class NNModel(object):
     def predict(self, x):
         x_normed = normalize(np.array([x]), train_mean, train_std)
         x_padded = pad_sequences(x_normed, 400, padding='post', truncating='post', dtype='float32', value=-1.)
-        return self._keras_model.predict_classes(x_padded)[0][0]
+        return self._keras_model.predict_classes(x_padded, verbose=0)[0][0]
