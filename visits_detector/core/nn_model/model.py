@@ -12,6 +12,7 @@ np.random.seed(1337)  # for reproducibility
 learning_rate = 0.0001
 clipnorm = 15.0
 train_keep_prob = 0.75
+sequence_maxlen = 400
 train_mean = np.array([76.69657889, 0.28964923])
 train_std = np.array([52.28199665, 0.67885899])
 
@@ -81,5 +82,6 @@ class NNModel(object):
 
     def predict(self, x):
         x_normed = normalize(np.array([x]), train_mean, train_std)
-        x_padded = pad_sequences(x_normed, 400, padding='post', truncating='post', dtype='float32', value=-1.)
+        x_padded = pad_sequences(x_normed, sequence_maxlen, padding='post', truncating='post', dtype='float32',
+                                 value=-1.)
         return self._keras_model.predict_classes(x_padded, verbose=0)[0][0]
