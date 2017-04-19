@@ -5,6 +5,7 @@ import numpy as np
 from keras.layers import Dense, Dropout, LSTM, Bidirectional, Masking, InputLayer
 from keras.models import Sequential
 from keras.optimizers import Adam
+from keras.preprocessing.sequence import pad_sequences
 
 np.random.seed(1337)  # for reproducibility
 
@@ -80,4 +81,5 @@ class NNModel(object):
 
     def predict(self, x):
         x_normed = normalize(np.array(x), train_mean, train_std)
-        return self._keras_model.predict_classes(x_normed)[0][0]
+        x_padded = pad_sequences(x_normed, 400, padding='post', truncating='post', dtype='float32', value=-1.)
+        return self._keras_model.predict_classes(x_padded)[0][0]
