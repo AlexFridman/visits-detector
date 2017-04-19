@@ -34,9 +34,9 @@ def main():
     gps_log = lazy_load_gps_log(args.gps_log_path)
 
     mapper = FilterAndMapToIndexMapper(
-        start_dt=datetime.datetime(2017, 4, 14),
-        end_dt=datetime.datetime(2017, 4, 15),
-        bbox=get_bbox_by_index(index, 0.5),
+        start_dt=datetime.datetime.min,
+        end_dt=datetime.datetime.max,
+        bbox=get_bbox_by_index(index, 0.1),
         geo_index=build_geo_index_from_point_index(index, precision=6),
         cut_off_r=200,
         id_column='uuid',
