@@ -8,7 +8,7 @@ setup(
     install_requires=[
         'tensorflow',
         'keras',
-        'haveresine',
+        'haversine',
         'geoindex',
         'pandas',
         'h5py'
