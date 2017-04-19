@@ -10,7 +10,8 @@ setup(
         'keras',
         'haveresine',
         'geoindex',
-        'pandas'
+        'pandas',
+        'h5py'
     ],
     license='',
     author='Alexander Fridman',

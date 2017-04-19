@@ -14,7 +14,8 @@ class EventExtractionStageParams(object):
                  session_timeout=10000,
                  max_interaction_break=20,
                  default_dist=200,
-                 use_nn_estimator=False):
+                 use_nn_estimator=False,
+                 model_path=''):
         """
         :param session_timeout: time in seconds between two sessions
         :param max_interaction_break: time in seconds between two nearest interactions
@@ -35,3 +36,4 @@ class EventExtractionStageParams(object):
         self.max_interaction_break = max_interaction_break
         self.default_dist = default_dist
         self.use_nn_estimator = use_nn_estimator
+        self.model_path = model_path
