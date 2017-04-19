@@ -9,12 +9,6 @@ from visits_detector.core.helpers.geo_index import build_geo_index_from_point_in
 from visits_detector.core.helpers.index import get_bbox_by_index, read_index
 from visits_detector.demo.mr_emulator import MapReduceEmulator
 
-GPS_LOG_PATH = '/Users/alfrid/Documents/Study/Repos/visits-detector/data/nn_test/gps_log.json'
-EVENTS_PATH = '/Users/alfrid/Documents/Study/Repos/visits-detector/data/nn_test/events.json'
-MODEL_PATH = '/Users/alfrid/Documents/Study/Repos/visits-detector/data/nn_test/model.hdf5'
-
-args = '--index-path /Users/alfrid/Documents/Study/Repos/visits-detector/data/nn_test/index.json --gps-log-path /Users/alfrid/Documents/Study/Repos/visits-detector/data/nn_test/gps_log.json --use-nn --model-path /Users/alfrid/Documents/Study/Repos/visits-detector/data/nn_test/model.hdf5'
-
 
 def lazy_load_gps_log(path):
     with open(path) as f:
@@ -30,7 +24,7 @@ def parse_args():
     parser.add_argument('--use-nn', action='store_true')
     parser.add_argument('--model-path')
 
-    return parser.parse_args(args.split())
+    return parser.parse_args()
 
 
 def main():
