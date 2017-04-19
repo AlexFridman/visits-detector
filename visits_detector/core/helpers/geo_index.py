@@ -1,6 +1,6 @@
 from __future__ import division
 
-from geo_index import GeoGridIndex, GeoPoint
+from geoindex import GeoGridIndex, GeoPoint
 
 
 def build_geo_index_from_coord_index(coord_index, precision=5):

@@ -1,7 +1,5 @@
 import json
 
-import cyson
-
 
 def read_index(path):
     try:
