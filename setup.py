@@ -1,9 +1,9 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='visits-detector',
     version='',
-    packages=['visits_detector'],
+    packages=find_packages(),
     url='',
     license='',
     author='Alexander Fridman',
