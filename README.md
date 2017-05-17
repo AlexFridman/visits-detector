@@ -6,4 +6,4 @@
 * baseline -- набор эвристик
 * с применением BLSTM
 
-![метрики качества](http://i.imgur.com/1S5E5NF.png)
+![метрики качества](http://i.imgur.com/UQi8vEN.png)
